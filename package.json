@@ -1,0 +1,29 @@
+{
+  "name": "grunt-pagekite",
+  "version": "0.0.0",
+  "description": "Publish a local server to the internet via PageKite",
+  "main": "tasks/pagekite.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/goodeggs/grunt-pagekite.git"
+  },
+  "keywords": [
+    "grunt",
+    "pagekite",
+    "localhost",
+    "localtunnel"
+  ],
+  "author": "Adam Hull <adam@hmlad.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/goodeggs/grunt-pagekite/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.7.2",
+    "load-grunt-tasks": "~0.2.1"
+  }
+}
