@@ -1,0 +1,12 @@
+##[ Default kite and account details ]##
+kitename   = your-account.pagekite.me
+kitesecret = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+##[ Front-end settings: use pagekite.net defaults ]##
+defaults
+
+##[ Back-ends and local services ]##
+service_on = http:@kitename : localhost:3000 : @kitesecret
+
+###[ End of pagekite.py configuration ]#########
+END
