@@ -32,7 +32,7 @@ module.exports = function(grunt) {
       args.push('--clean', '--default');
       args.push('--optfile=' + options.optfile);
     }
-    var kite = spawn('./pagekite.py', args);
+    var kite = spawn(__dirname+'/pagekite.py', args);
 
     kite.stdout.on('data', function(data) {
       if (!started && /status=0x11000/.test(data)) {
