@@ -59,16 +59,17 @@ There's an example configuration in `pagekite.example.rc`.
 
 Examples
 --------
-Check out `Gruntfile.coffee` for an example of starting PageKite, then an express server, then running tests against the server through the PageKite proxy.
+Check out `Gruntfile.coffee` for an example of starting an express server, then PageKite, then running tests against the server through the PageKite proxy.
 
 Running Tests
 -------------
 
-You'll need to configure `pagekite.rc` with your PageKite account:
+You'll need to configure `pagekite.example.json` with your PageKite account:
 
 ```shell
-> cp pagekite.example.rc pagekite.rc
-> vi pagekite.rc
+> cp pagekite.example.json pagekite.json
+> vi pagekite.json
+> ...
 > npm install
 > npm test
 ```
