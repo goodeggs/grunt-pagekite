@@ -1,6 +1,6 @@
 {
   "name": "grunt-pagekite",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Publish a local server to the internet via PageKite",
   "main": "tasks/pagekite.js",
   "scripts": {
