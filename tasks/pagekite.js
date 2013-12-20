@@ -35,7 +35,10 @@ module.exports = function(grunt) {
     var kite = spawn(__dirname+'/pagekite.py', args);
 
     kite.stdout.on('data', function(data) {
-      if (!started && /status=0x11000/.test(data)) {
+      if (!started && (
+        /status=0x11000/.test(data) ||
+        /status=0x1000/.test(data)
+      )) {
         started = true;
         var hostname = /bid=([\w:\.]+);/.exec(data)[1];
         grunt.log.ok("Flying as " + hostname);
