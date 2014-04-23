@@ -24,7 +24,7 @@ module.exports = function(grunt) {
 
 
     grunt.log.writeln('Connecting to pagekite...');
-    var args = [];
+    var args = [__dirname+'/pagekite.py'];
     if (kitename && port && secret) {
       args.push('--clean', '--default');
       args.push('--service_on=http:'+kitename+':localhost:'+port+':'+secret);
@@ -32,7 +32,7 @@ module.exports = function(grunt) {
       args.push('--clean', '--default');
       args.push('--optfile=' + options.optfile);
     }
-    var kite = spawn(__dirname+'/pagekite.py', args);
+    var kite = spawn('python', args);
 
     kite.stdout.on('data', function(data) {
       if (!started && (
