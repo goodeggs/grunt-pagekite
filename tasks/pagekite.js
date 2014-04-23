@@ -20,7 +20,8 @@ module.exports = function(grunt) {
         // -- OR ----
         port = options.port,
         kitename = options.kitename,
-        secret = options.secret;
+        secret = options.secret,
+        frontend = options.frontend;
 
 
     grunt.log.writeln('Connecting to pagekite...');
@@ -28,6 +29,10 @@ module.exports = function(grunt) {
     if (kitename && port && secret) {
       args.push('--clean', '--default');
       args.push('--service_on=http:'+kitename+':localhost:'+port+':'+secret);
+      
+      if (frontend)
+        args.push('--frontend='+frontend);
+
     } else if (optfile) {
       args.push('--clean', '--default');
       args.push('--optfile=' + options.optfile);
