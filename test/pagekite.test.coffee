@@ -8,9 +8,3 @@ describe 'requesting a resource via the pagekite hostname', ->
     request "http://#{kitename}/kite.png", (err, response) ->
       response.statusCode.should.equal 200
       done err
-
-
-
-
-
-

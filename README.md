@@ -7,10 +7,11 @@ Publish a local server to the internet via [PageKite](https://pagekite.net/).
 grunt.initConfig({
   pagekite: {
     options: {
-      kitename: 'your-kite.pagekite.me',
       port: 3000,
       secret: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
-    }
+    },
+    mykite: {
+      kitename: 'your-kite.pagekite.me'
   }
 });
 ```
@@ -35,10 +36,11 @@ grunt.loadNpmTasks('grunt-pagekite');
 grunt.initConfig({
   pagekite: {
     options: {
-      kitename: 'your-kite.pagekite.me',
       port: 3000,
       secret: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
-    }
+    },
+    mykite: {
+      kitename: 'your-kite.pagekite.me'
   }
 });
 ```
@@ -48,7 +50,7 @@ Or point the Gruntfile at your PageKite configuration:
 ```js
 grunt.initConfig({
   pagekite: {
-    options: {
+    mykite: {
       optfile: 'pagekite.rc'
     }
   }
