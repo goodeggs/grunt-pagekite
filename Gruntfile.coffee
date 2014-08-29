@@ -13,8 +13,9 @@ module.exports = (grunt) ->
     pagekite:
       options:
         kitename: kitename
-        secret: secret
         port: port
+      test:
+        secret: secret
 
     connect:
       server:
@@ -28,7 +29,7 @@ module.exports = (grunt) ->
   grunt.registerTask 'test', [
     'jshint'
     'connect'
-    'pagekite'
+    'pagekite:test'
     'simplemocha'
   ]
 
